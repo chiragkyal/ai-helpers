@@ -177,3 +177,4 @@ go install golang.org/x/tools/cmd/digraph@latest
 - Falls back to user-provided information if internet access fails
 - Does NOT make changes without explicit user approval
 - Reports are saved locally and not committed to git
+- **CI/Jira integration**: When running in CI, the workflow supports a `CVE_AGENT_JIRA_KEY` env var (e.g., `OCPBUGS-12345`). The process step fetches the Jira issue from Atlassian Cloud, extracts CVE ID(s) from the summary/description, and runs analysis with enriched Jira context. See the `compliance-cve-agent` step registry for details.
